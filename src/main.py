@@ -12,7 +12,7 @@ def main(p: Path):
         data.append(crawl(url))
 
     out = Path("../index.json")
-    out.write_text(json.dumps(data))
+    out.write_text(json.dumps(data, indent=2))
 
 
 def crawl(url: str) -> dict:
